@@ -6,6 +6,7 @@
     --basic-white: #FFFFFF;
     --basic-light-grey: #F8F8F8;
     --basic-light-pink: #F1E4E6;
+    --basic-pale-pink: #F8F3F4;
 }
 
 * {
@@ -196,8 +197,13 @@ body {
 
 /*featured-goods*/
 
+.featured-goods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .featured-goods-heading {
-    text-align: center;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -206,8 +212,7 @@ body {
 }
 
 .featured-goods-promo {
-    text-align: center;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -221,13 +226,112 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
+    list-style: none;
 }
 
 .featured-goods-item {
     width: 360px;
     margin-right: 30px;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--basic-light-grey);
+    position: relative;
+}
+
+.featured-goods-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+}
+
+.md {
+    margin-bottom: 30px;
+}
+
+.featured-goods-item:hover .product-card-image {
+    filter: brightness(50%);
+}
+
+.featured-goods-item:hover .add-card-link {
+    display: block;
+}
+
+.add-card-link {
+    display: none;
+    color: var(--basic-white);
+    border: 1px solid var(--basic-white);
+    padding: 14px 14px 12px 50px;
+    position: absolute;
+    top: 188px;
+    left: 111px;
+}
+
+.add-card {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.add-card::before {
+    content: "";
+    width: 27px;
+    height: 25px;
+    position: absolute;
+    background-image: url(../img/cart-product.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    left: 13px;
+    top: 11px;
+}
+
+.product-card-content {
+    padding: 24px 16px 20px;
+}
+
+.featured-goods-card-title {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--basic-black);
+}
+
+.item-description {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 18px;
+    margin-top: 12px;
+}
+
+.item-price {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--basic-pink);
+}
+
+.button-all-catalog {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid #F26376;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    margin-top: 18px;
+    margin-bottom: 95px;
+}
+
+.button-all-catalog:hover {
+    color: var(--basic-white);
+    background-color: var(--basic-pink);
+    border: 1px solid #FF6A6A;
 }
 
 .services {
@@ -310,6 +414,7 @@ body {
     background-image: url(../img/photo_subscribe.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .contacts-wrap {
@@ -402,6 +507,10 @@ input {
     border-top-right-radius: 20px;
 }
 
+.button-subscribe:hover {
+    background-color: #E05C6E;
+}
+
 .main-footer {
     height: 79px;
     background-color: var(--basic-background);
@@ -414,6 +523,7 @@ input {
     align-items: center;
     height: 100%;
 }
+
 .copyright {
     font-family: Lato;
     font-style: normal;
@@ -422,6 +532,7 @@ input {
     line-height: 19px;
     color: #FBFBFB;
 }
+
 .social-list {
     list-style: none;
     display: flex;
@@ -439,6 +550,141 @@ input {
     height: 32px;
     background-color: var(--basic-white);
 }
-.social-list-link-active {
+
+.social-list-link:hover {
     background-color: var(--basic-pink);
+}
+
+.social-list-link:hover path {
+    fill: var(--basic-white);
+}
+
+
+/*catalog*/
+
+.new-arrivals {
+    background-color: var(--basic-pale-pink);
+    height: 148px;
+}
+
+.new-arrivals-wrap {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-arrivals-title {
+    color: var(--basic-pink);
+}
+
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+}
+.breadcrumbs-item:not(:last-child){
+ margin-right: 10px;
+}
+.breadcrumbs-link-current {
+    color: var(--basic-pink);
+}
+.filters {
+    margin-top: 51px;
+    display: flex;
+    width: inherit;
+   
+}
+.filter-title {
+    font-weight: 600;
+    color: var(--basic-black);
+    margin-right: 320px;
+    padding-right: 25px;
+    position: relative
+}
+.filter-title::after {
+    content: "";
+    width: 15px;
+    height: 10px;
+    background-image: url(../img/filter-ham.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+.filters-list { 
+    list-style: none;
+    display: flex;
+}
+.filters-item {
+    margin-right: 27px;
+    padding-right: 21px;
+    position: relative;
+}
+.filters-item::after {
+   content: "";
+    width: 11px;
+    height: 6px;
+    background-image: url(../img/filter-marker.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+.pagination-list {
+    list-style: none;
+    display: flex;
+    margin-left: 17px;
+    margin-right: 15px;
+}
+
+.pagination-wrap {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    margin-top: 18px;
+    margin-bottom: 96px;
+    color: #C4C4C4;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.pagination-back {
+    width: 9px;
+    height: 14px;
+    border: 0;
+    padding: 0;
+    background-size: contain;
+    background-image: url(../img/catalog-back.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pagination-list-item:not(:last-child) {
+    margin-right: 22px;
+}
+
+.pagination-link-current {
+    color: #EF5B70;
+}
+
+.pagination-forvard {
+    width: 9px;
+    height: 14px;
+    border: 0;
+    padding: 0;
+    background-size: contain;
+    background-image: url(../img/catalog-forvard.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
