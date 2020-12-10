@@ -511,13 +511,13 @@ input {
     background-color: #E05C6E;
 }
 
-.main-footer {
+.footer-bottom {
     height: 79px;
     background-color: var(--basic-background);
     color: #FBFBFB;
 }
 
-.main-footer-wrap {
+.footer-bottom-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
