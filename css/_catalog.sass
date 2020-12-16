@@ -1,0 +1,181 @@
+.new-arrivals
+    background-color: #F8F3F4
+    height: 148px
+
+    &-wrap
+        height: inherit
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &-title
+        color: $colorSelect
+
+.breadcrumbs
+    list-style: none
+    display: flex
+
+    &-item-link:not(:last-child)::after
+        content: "/"
+        padding-left: 8px
+        padding-right: 8px
+
+    &-item-link
+        color: #636363
+
+    &-link-current
+        color: $colorSelect
+        font-weight: bold
+
+    &-item-link:hover
+        color: $colorSelect
+        font-weight: bold
+
+.filters
+    margin-top: 51px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    column-gap: 30px
+    width: inherit
+    position: relative
+    font-family: Lato
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    /* identical to box height */
+    color: #6F6E6E
+
+.filter-title
+    font-weight: 600
+    color: #222222
+    position: relative
+
+.filters-container
+    padding-left: 16px
+
+.filter-title:hover
+    color: $colorSelect
+
+.filter-title:hover .filters-icon>path
+    fill: $colorSelect
+
+.filters-content
+    display: none
+    margin-top: 16px
+
+.filters-param
+    grid-column: 2/4
+    list-style: none
+    display: flex
+
+.filters-active:hover
+    width: 360px
+    background-color: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 16px
+    position: absolute
+    z-index: 1
+    top: -16px
+
+.filters-active:hover .filters-content
+    display: block
+
+.filters-ul
+    list-style: none
+    padding: 0 11px 24px 11px
+
+    &-item
+        padding-top: 11px
+
+.filters-item
+    font-family: Lato
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    color: $colorSelect
+    border-bottom: 1px solid #EBEBEB
+    border-left: 5px solid $colorSelect
+    padding: 15px 11px
+    margin-bottom: 18px
+
+.filters-param-section
+    position: relative
+    margin-right: 27px
+
+.filters-param-item:hover
+    color: $colorSelect
+
+.filters-param-item-content
+    display: flex
+    flex-direction: column
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    position: absolute
+    padding: 9px 30px 9px 9px
+    z-index: 1
+    top: 22px
+
+.filters-param-item
+    display: flex
+    align-items: center
+
+.filters-param-image
+    margin-left: 10px
+
+.pagination-list
+    list-style: none
+    display: flex
+    margin-left: 17px
+    margin-right: 15px
+
+.pagination-wrap
+    display: flex
+    align-items: center
+    padding: 15px
+    border: 1px solid #EBEBEB
+    border-radius: 2px
+    margin-top: 18px
+    margin-bottom: 96px
+    color: #C4C4C4
+    font-family: Lato
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+
+.pagination-back
+    width: 9px
+    height: 14px
+    border: 0
+    padding: 0
+    background-size: contain
+    background-image: url(../img/catalog-back.svg)
+    background-repeat: no-repeat
+    background-color: transparent
+    cursor: pointer
+    display: inline-block
+    vertical-align: middle
+
+.pagination-list-item:not(:last-child)
+    margin-right: 22px
+
+.pagination-link:hover
+    color: $colorSelect
+
+.pagination-link-current
+    color: #E05C6E
+
+.pagination-forvard
+    width: 9px
+    height: 14px
+    border: 0
+    padding: 0
+    background-size: contain
+    background-image: url(../img/catalog-forvard.svg)
+    background-repeat: no-repeat
+    background-color: transparent
+    cursor: pointer
+    display: inline-block
+    vertical-align: middle
