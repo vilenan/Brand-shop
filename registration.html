@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>страница товара</title>
+    <title>страница регистрации</title>
 </head>
 
 <body>
@@ -24,9 +24,9 @@
                 <div class="user-nav2">
                     <a href="#" class="user-nav-link--menu"><img src="img/icon-menu.svg" width="32" height="23"
                             alt="меню"></a>
-                    <a href="registration.html" class="user-nav-link--user"><img src="img/icon-user.svg" width="29" height="29"
+                    <a href="#" class="user-nav-link--user"><img src="img/icon-user.svg" width="29" height="29"
                             alt="личный кабинет"></a>
-                    <a href="#" class="user-nav-link--cart"><img src="img/icon-cart.svg" width="33" height="29"
+                    <a href="cart.html" class="user-nav-link--cart"><img src="img/icon-cart.svg" width="33" height="29"
                             alt="корзина"></a>
                 </div>
             </nav>
@@ -34,61 +34,48 @@
         <main>
             <section class="new-arrivals">
                 <div class="new-arrivals-wrap container">
-                    <h2 class="new-arrivals-title">SHOPPING CART</h2>
+                    <h2 class="new-arrivals-title">REGISTRATION</h2>
                 </div>
             </section>
+            <div class="registration container">
+                <form class="registration-form" action="#">
+                    <fieldset>
+                        <legend>Your Name</legend>
+                        <input class="registration-form-input" type="text" placeholder="First Name">
+                        <input class="registration-form-input" type="text" placeholder="Last Name">
+                    </fieldset>
+                    <div class="input-male">
+                        <label><input class="registration-form-radio" type="radio" value="Male">Male</label>
+                        <label><input class="registration-form-radio" type="radio" value="Female">Female</label>
+                    </div>
 
-            <div class="cart container">
-                <div class="cart-content">
-                    
-                    <div class="card card_mb">
-                        <a href="product.html"><img class="card-image" src="img/cart_product_1.jpg" width="262" height="306" alt="синяя кофта"></a>
-                        <div class="card-content">
-                            <h3 class="card-title">MANGO  PEOPLE  T-SHIRT</h3>
-                            <p class="card-text">Price: <span class="card-price">$300</span></p>
-                            <p class="card-text">Color: Red</p>
-                            <p class="card-text">Size: Xl</p>
-                            <p class="card-text">Quantity: <input type="number" min="1" max="5" value="2"></p>
-                        </div>
-                        <button class="card-close" type="button" aria-label="Закрыть"></button>
-                    </div>
-                    <div class="card card_mb">
-                        <a href="product.html"><img class="card-image" src="img/cart_product_2.jpg" width="262" height="306" alt="синяя кофта"></a>
-                        <div class="card-content">
-                            <h3 class="card-title">MANGO  PEOPLE  T-SHIRT</h3>
-                            <p class="card-text">Price: <span class="card-price">$300</span></p>
-                            <p class="card-text">Color: Red</p>
-                            <p class="card-text">Size: Xl</p>
-                            <p class="card-text">Quantity: <input type="number" min="1" max="5" value="2"></p>
-                        </div>
-                        <button class="card-close" type="button" aria-label="Закрыть"></button>
-                    </div>
-                    
+                    <fieldset>
+                        <legend>Login details</legend>
+                        <input class="registration-form-input" type="email" placeholder="Email">
+                        <input class="registration-form-input" type="password" placeholder="Password">
+                        <p class="form-notification">Please use 8 or more characters, with at least 1 number and a
+                            mixture of uppercase and lowercase letters</p>
+                    </fieldset>
+                    <button class="button-join" type="submit">JOIN NOW</button>
+                </form>
+                <div class="registration-features">
+                    <h3 class="registration-features-title">LOYALTY HAS ITS PERKS</h3>
+                    <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
+                        these as soon as you join:</p>
+                    <ul class="registration-features-list">
+                        <li class="registration-features-item">15% off welcome offer
+                        </li>
+                        <li class="registration-features-item">Free shipping, returns and exchanges on all orders
 
-                    <div class="cart-controls">
-                        <button class="cart-button" type="reset">CLEAR SHOPPING CART</button>
-                        <button class="cart-button" type="button">CONTINUE SHOPPING</button>
-                    </div>
-                </div>
+                        </li>
+                        <li class="registration-features-item">$10 off a purchase on your birthday
 
-                <div class="address-form">
-                    <form class="get-address-form" action="#">
-                        <h3 class="address-form-title">SHIPPING ADRESS</h3>
-                        <input class="address-form-input" type="text" placeholder="Bangladesh">
-                        <input class="address-form-input" type="text" placeholder="State">
-                        <input class="address-form-input" type="number" placeholder="Postcode / Zip">
-                        <button class="address-form-button" type="submit">GET A QUOTE</button>
-                    </form>
-                    <div class="total">
-                        <p class="total-subtext">SUB TOTAL $900</p>
-                        <p class="total-text">GRAND TOTAL <span class="total-price">$900</span></p>
-                        <hr class="total-underline">
-                        <button class="button-proceed">PROCEED TO CHECKOUT</button>
-                    </div>
+                        </li>
+                        <li class="registration-features-item">Early access to products</li>
+                        <li class="registration-features-item">Exclusive offers & rewards</li>
+                    </ul>
                 </div>
             </div>
-
-
 
 
         </main>
@@ -106,7 +93,8 @@
                         <p class="form-content">FOR OUR NEWLETTER AND PROMOTION</p>
                         <div class="form-box">
                             <label for="subscription-form-email" class="visually-hidden">E-mail</label>
-                            <input class="input-email" id="subscription-form-email" type="email" placeholder="Enter Your Email">
+                            <input class="input-email" id="subscription-form-email" type="email"
+                                placeholder="Enter Your Email">
                             <button class="button-subscribe" type="submit">Subscribe</button>
                         </div>
                     </form>
