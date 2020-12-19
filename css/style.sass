@@ -1,6 +1,85 @@
 @import vars
 @import mixins
+// кнопка в корзине
+@-webkit-keyframes shake-horizontal
+  0%,
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
 
+  10%,
+  30%,
+  50%,
+  70%
+    -webkit-transform: translateX(-10px)
+    transform: translateX(-10px)
+
+  20%,
+  40%,
+  60%
+    -webkit-transform: translateX(10px)
+    transform: translateX(10px)
+
+  80%
+    -webkit-transform: translateX(8px)
+    transform: translateX(8px)
+
+  90%
+    -webkit-transform: translateX(-8px)
+    transform: translateX(-8px)
+
+@keyframes shake-horizontal
+    0%,
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+
+    10%,
+    30%,
+    50%,
+    70%
+        -webkit-transform: translateX(-10px)
+        transform: translateX(-10px)
+
+    20%,
+    40%,
+    60%
+        -webkit-transform: translateX(10px)
+        transform: translateX(10px)
+
+    80%
+        -webkit-transform: translateX(8px)
+        transform: translateX(8px)
+
+    90%
+        -webkit-transform: translateX(-8px)
+        transform: translateX(-8px)
+// фон в футере
+@-webkit-keyframes kenburns-top
+    0%
+    -webkit-transform: scale(1) translateY(0)
+    transform: scale(1) translateY(0)
+    -webkit-transform-origin: 50% 16%
+    transform-origin: 50% 16%
+
+    100%
+    -webkit-transform: scale(1.25) translateY(-15px)
+    transform: scale(1.25) translateY(-15px)
+    -webkit-transform-origin: top
+    transform-origin: top
+
+@keyframes kenburns-top
+    0%
+        -webkit-transform: scale(1) translateY(0)
+        transform: scale(1) translateY(0)
+        -webkit-transform-origin: 50% 16%
+        transform-origin: 50% 16%
+
+    100%
+        -webkit-transform: scale(1.25) translateY(-15px)
+        transform: scale(1.25) translateY(-15px)
+        -webkit-transform-origin: top
+        transform-origin: top
 *
     margin: 0
     padding: 0
@@ -61,6 +140,12 @@ body
         justify-content: space-between
         align-items: center
         height: inherit
+
+        .logo-link-image
+            transition: transform 0.2s
+
+        .logo-link:hover .logo-link-image
+            transform: scale(1.25)
 
 .user-nav-link--search
     margin-left: 41px
@@ -124,44 +209,44 @@ body
     grid-template-rows: 1fr 180px
     grid-gap: 30px
 
-.catalog-category--acccesory
-    grid-column: 1/4
+    .catalog-category--acccesory
+        grid-column: 1/4
 
-.catalog-category--women,
-.catalog-category--men,
-.catalog-category--kids,
-.catalog-category--acccesory
-    position: relative
+    .catalog-category
+        position: relative
+        transition: transform 0.2s
+        &:hover
+            transform: scale(1.02)
 
-.catalog-category-content
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    .catalog-category-content
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
-.catalog-category-title
-    font-family: 'Lato', sans-serif
-    font-style: normal
-    font-weight: bold
-    font-size: 24px
-    line-height: 29px
-    text-align: center
-    color: $colorSelect
-    order: 1
+        .catalog-category-title
+            font-family: 'Lato', sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 29px
+            text-align: center
+            color: $colorSelect
+            order: 1
 
-.catalog-category-offer
-    font-family: 'Lato', sans-serif
-    font-style: normal
-    font-weight: normal
-    font-size: 16px
-    line-height: 19px
-    text-align: center
-    color: #FFFFFF
+        .catalog-category-offer
+            font-family: 'Lato', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            text-align: center
+            color: #FFFFFF
 
 /*featured-goods*/
 
@@ -197,9 +282,11 @@ body
         margin-right: 30px
         background-color: #F8F8F8
         position: relative
+        transition: transform 0.2s
 
     &-item:hover
         box-shadow: 0 4px 20px rgba(0, 0, 0, .15)
+        transform: scale(1.02)
 
 .md
     margin-bottom: 30px
@@ -356,6 +443,7 @@ body
     background-repeat: no-repeat
     background-position: center
     background-size: cover
+    animation: kenburns-top 5s ease-out both
 
     &-wrap
         display: flex
