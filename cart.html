@@ -17,14 +17,14 @@
         <header class="main-header">
             <nav class="main-header-nav center">
                 <div class="user-nav1">
-                    <a href="index.html"> <img src="img/logo.svg" width="44" height="38" alt="логотип"> </a>
+                    <a class="logo-link" class="logo-link-image" href="index.html"> <img class="logo-link-image" src="img/logo.svg" width="44" height="38" alt="логотип"> </a>
                     <a href="#" class="user-nav-link--search"> <img src="img/icon-search.svg" width="27" height="28"
                             alt="поиск"> </a>
                 </div>
                 <div class="user-nav2">
                     <a href="#" class="user-nav-link--menu"><img src="img/icon-menu.svg" width="32" height="23"
                             alt="меню"></a>
-                    <a href="#" class="user-nav-link--user"><img src="img/icon-user.svg" width="29" height="29"
+                    <a href="registration.html" class="user-nav-link--user"><img src="img/icon-user.svg" width="29" height="29"
                             alt="личный кабинет"></a>
                     <a href="#" class="user-nav-link--cart"><img src="img/icon-cart.svg" width="33" height="29"
                             alt="корзина"></a>
@@ -37,72 +37,56 @@
                     <h2 class="new-arrivals-title">SHOPPING CART</h2>
                 </div>
             </section>
-            <section class="cart container">
-                <h2 class="visually-hidden">Корзина</h2>
+
+            <div class="cart container">
                 <div class="cart-content">
-                    <div class="cart-product">
-                        <img src="img/cart_product_1.jpg" alt="синяя кофта">
-                        <div class="cart-product-content">
-                            <h3 class="cart-product-title">MANGO  PEOPLE  T-SHIRT</h3>
-                            <dl>
-                                <dt>Price:</dt>
-                                <dd>$300</dd>
-                                <dt>Color:</dt>
-                                <dd>Red</dd>
-                                <dt>Size:</dt>
-                                <dd>Xl</dd>
-                                <dt>Quantity:</dt>
-                                <dd>2</dd>
-                            </dl>
-
+                    
+                    <div class="card card_mb">
+                        <a href="product.html"><img class="card-image" src="img/cart_product_1.jpg" width="262" height="306" alt="синяя кофта"></a>
+                        <div class="card-content">
+                            <h3 class="card-title">MANGO  PEOPLE  T-SHIRT</h3>
+                            <p class="card-text">Price: <span class="card-price">$300</span></p>
+                            <p class="card-text">Color: Red</p>
+                            <p class="card-text">Size: Xl</p>
+                            <p class="card-text">Quantity: <input type="number" min="1" max="5" value="2"></p>
                         </div>
+                        <button class="card-close" type="button" aria-label="Закрыть"></button>
                     </div>
-                    <div class="cart-product">
-                        <img src="img/cart_product_2.jpg" alt="красная кофта">
-                        <div class="cart-product-content">
-                            <h3 class="cart-product-title">MANGO  PEOPLE  T-SHIRT</h3>
-                            <dl>
-                                <dt>Price:</dt>
-                                <dd>$300</dd>
-                                <dt>Color:</dt>
-                                <dd>Red</dd>
-                                <dt>Size:</dt>
-                                <dd>Xl</dd>
-                                <dt>Quantity:</dt>
-                                <dd>2</dd>
-                            </dl>
-
+                    <div class="card card_mb">
+                        <a href="product.html"><img class="card-image" src="img/cart_product_2.jpg" width="262" height="306" alt="синяя кофта"></a>
+                        <div class="card-content">
+                            <h3 class="card-title">MANGO  PEOPLE  T-SHIRT</h3>
+                            <p class="card-text">Price: <span class="card-price">$300</span></p>
+                            <p class="card-text">Color: Red</p>
+                            <p class="card-text">Size: Xl</p>
+                            <p class="card-text">Quantity: <input type="number" min="1" max="5" value="2"></p>
                         </div>
-
+                        <button class="card-close" type="button" aria-label="Закрыть"></button>
                     </div>
+                    
+
                     <div class="cart-controls">
-                        <button>CLEAR SHOPPING CART</button>
-                        <button>CONTINUE SHOPPING</button>
+                        <button class="cart-button" type="reset">CLEAR SHOPPING CART</button>
+                        <button class="cart-button" type="button">CONTINUE SHOPPING</button>
                     </div>
                 </div>
+
                 <div class="address-form">
-                    
                     <form class="get-address-form" action="#">
-                        <h3>SHIPPING ADRESS</h3>
-                        <input type="text" placeholder="Bangladesh">
-                        <input type="text" placeholder="State">
-                        <input type="number" placeholder="Postcode / Zip">
-                        <button class="" type="submit">GET A QUOTE</button>
+                        <h3 class="address-form-title">SHIPPING ADRESS</h3>
+                        <input class="address-form-input" type="text" placeholder="Bangladesh">
+                        <input class="address-form-input" type="text" placeholder="State">
+                        <input class="address-form-input" type="number" placeholder="Postcode / Zip">
+                        <button class="address-form-button" type="submit">GET A QUOTE</button>
                     </form>
                     <div class="total">
-                        <dt>SUB TOTAL</dt>
-                        <dd>$900</dd>
-                        <dt>GRAND TOTAL</dt>
-                        <dd>$900</dd>
+                        <p class="total-subtext">SUB TOTAL $900</p>
+                        <p class="total-text">GRAND TOTAL <span class="total-price">$900</span></p>
+                        <hr class="total-underline">
                         <button class="button-proceed">PROCEED TO CHECKOUT</button>
-
                     </div>
-                    
-
                 </div>
-
-
-            </section>
+            </div>
 
 
 
