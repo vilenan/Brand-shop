@@ -98,7 +98,7 @@ a
     padding-right: calc(50% - 570px)
 
 .container
-    width: 1140px
+    max-width: 1140px
     margin: 0 auto
 
 img
@@ -156,7 +156,7 @@ body
 
 .promo
     display: flex
-    height: 763px
+    min-height: 763px
 
     &-item
         width: 50%
@@ -422,13 +422,13 @@ body
     right: 156px
     top: -60px
 
-    &-item-heading
+    &-heading
         font-style: normal
         font-weight: normal
         font-size: 19.96px
         line-height: 24px
 
-    &-item-content
+    &-content
         margin-top: 16px
         font-style: normal
         font-weight: 300
@@ -576,4 +576,159 @@ blockquote
 
 @import cart
 
-@import registration
+    @media ( max-width: 1139px )
+    .main-header-nav
+        padding-left: 32px
+        padding-right: 32px
+    .promo
+        min-height: 369px
+
+        &-item-content-wrap
+            margin-top: 128px
+            margin-left: 40px
+
+        &-item-heading
+            font-size: 44px
+            line-height: 53px
+
+        &-item-content p
+            font-size: 24px
+            line-height: 29px
+
+        &-item-image::after
+            display: none
+
+        &-item-image
+            background-image: url(../img/promo__img.png)
+            background-repeat: no-repeat
+            background-size: contain
+
+    .offers
+        margin-top: 19px
+        margin-left: 16px
+        margin-right: 16px
+        margin-bottom: 154px
+        grid-template-rows: 1fr 116px
+        grid-gap: 19px
+
+    .featured-goods
+        margin-right: 16px
+        margin-left: 16px
+
+        &-list
+            margin-right: 0px
+            margin-top: 72px
+            justify-content: center
+
+        &-item
+            margin-right: 0
+
+        &-item:nth-child(2n-1)
+            margin-right: 16px
+
+    .md
+        margin-bottom: 16px
+
+    .button-all-catalog
+        margin-top: 16px
+        margin-bottom: 64px
+
+    .services
+        min-height: 610px
+
+        &-list
+            flex-direction: column
+            align-items: center
+            margin-right: 0
+        &-item
+            margin-top: 108px
+            margin-right: 0
+
+    .contacts
+        min-height: 614px
+        &-wrap
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    blockquote
+        margin-top: 64px
+
+    .subscription-form
+        margin-top: 48px
+
+    .footer-bottom-wrap
+        padding-left: 32px
+        padding-right: 32px
+
+    .social-list-item:not(:last-child)
+        margin-right: 7px
+
+@media ( max-width: 767px )
+    .main-header-nav
+        padding-left: 16px
+        padding-right: 16px
+
+    .user-nav-link--user,
+    .user-nav-link--cart
+        display: none
+
+    .promo
+        min-height: 363px
+
+        &-item-image
+            display: none
+
+        &-item-content
+            width: 100%
+            +centerFlex()
+            align-items: center
+            justify-content: center
+
+            .promo-item-content-wrap
+                margin-top: 0
+                margin-left: 0
+
+                .promo-item-content-heading
+                    font-size: 38px
+                    line-height: 46px
+
+                p
+                    font-size: 20px
+                    line-height: 24px
+
+    .offers
+        +centerFlex()
+        align-items: center
+        margin-bottom: 64px
+        margin-top: 64px
+
+        .catalog-category--acccesory img
+            width: 360px
+            min-height: 111px
+
+    .featured-goods-list
+        margin-top: 64px
+
+    .featured-goods-item:nth-child(2n-1)
+        margin-right: 0
+
+    .button-all-catalog
+        margin-bottom: 96px
+        margin-top: 24px
+
+    .footer-bottom
+        min-height: 143px
+
+    .footer-bottom-wrap
+        flex-direction: column
+
+    .copyright
+        order: 2
+        margin-bottom: 9px
+
+    .social-list
+        margin-top: 43px
+
+    // .catalog-category--acccesory
+    //     min-height: 111px
