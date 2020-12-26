@@ -1,5 +1,4 @@
 @import vars
-
 @import mixins
 // кнопка в корзине
 @-webkit-keyframes shake-horizontal
@@ -82,6 +81,7 @@
         transform: scale(1.25) translateY(-15px)
         -webkit-transform-origin: top
         transform-origin: top
+
 *
     margin: 0
     padding: 0
@@ -137,6 +137,7 @@ body
 .main-header
     height: 75px
     background-color: #222222
+    position: relative
 
     &-nav
         display: flex
@@ -156,6 +157,68 @@ body
 .user-nav-link--user
     margin-left: 34px
     margin-right: 34px
+
+#switcher
+    position: absolute
+    left: -099999px
+    visibility: hidden
+    &:checked ~ .drop
+        opasity: 1
+        visibility: visible
+
+.drop
+    background-color: #ffffff
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 37px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    opasity: 0
+    visibility: hidden
+    width: $widthMenu
+    height: 764px
+    transition: opasity 0.4s
+    z-index: 1
+
+    &-box
+        margin-top: 24px
+
+    &-name
+        font-family: Lato
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        margin-bottom: 24px
+
+    &-box-heading
+        font-family: Lato
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: $colorSelect
+
+        &:hover
+            text-decoration-line: underline
+
+    &-box-list
+        list-style-type: none
+        padding-left: 20px
+        margin-top: 12px
+
+        .drop-box-link
+            font-family: Lato
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+            display: block
+            margin-bottom: 11px
+            &:hover
+                color: $colorSelect
 
 .promo
     display: flex
@@ -678,7 +741,8 @@ blockquote
     .user-nav-link--user,
     .user-nav-link--cart
         display: none
-
+    .drop
+        width: 100%
     .promo
         min-height: 363px
 
