@@ -1,5 +1,4 @@
 @import vars
-
 @import mixins
 // кнопка в корзине
 @-webkit-keyframes shake-horizontal
@@ -82,6 +81,7 @@
         transform: scale(1.25) translateY(-15px)
         -webkit-transform-origin: top
         transform-origin: top
+
 *
     margin: 0
     padding: 0
@@ -137,6 +137,7 @@ body
 .main-header
     height: 75px
     background-color: #222222
+    position: relative
 
     &-nav
         display: flex
@@ -150,12 +151,82 @@ body
         .logo-link:hover .logo-link-image
             transform: scale(1.25)
 
+.user-nav2
+    display: flex
+    align-items: center
+
+.header-box
+    &-nav
+        display: none
+
 .user-nav-link--search
     margin-left: 41px
 
 .user-nav-link--user
     margin-left: 34px
     margin-right: 34px
+
+#switcher
+    position: absolute
+    left: -099999px
+    visibility: hidden
+    &:checked ~ .drop
+        opasity: 1
+        visibility: visible
+
+.drop
+    background-color: #ffffff
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 37px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    opasity: 0
+    visibility: hidden
+    width: $widthMenu
+    height: 764px
+    transition: opasity 0.4s
+    z-index: 1
+
+    &-box
+        margin-top: 24px
+
+    &-name
+        font-family: Lato
+        font-style: normal
+        font-weight: bold
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        margin-bottom: 24px
+
+    &-box-heading
+        font-family: Lato
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: $colorSelect
+
+        &:hover
+            text-decoration-line: underline
+
+    &-box-list
+        list-style-type: none
+        padding-left: 20px
+        margin-top: 12px
+
+        .drop-box-link
+            font-family: Lato
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+            display: block
+            margin-bottom: 11px
+            &:hover
+                color: $colorSelect
 
 .promo
     display: flex
@@ -251,6 +322,8 @@ body
             text-align: center
             color: #FFFFFF
 
+    .catalog-category-image
+        width: 100%
 /*featured-goods*/
 
 .featured-goods
@@ -581,160 +654,6 @@ blockquote
 
 @import registration
 
-@media ( max-width: 1139px )
+@import m768
 
-    .main-header-nav
-        padding-left: 32px
-        padding-right: 32px
-    .promo
-        min-height: 369px
-
-        &-item-content-wrap
-            margin-top: 128px
-            margin-left: 40px
-
-        &-item-heading
-            font-size: 44px
-            line-height: 53px
-
-        &-item-content p
-            font-size: 24px
-            line-height: 29px
-
-        &-item-image::after
-            display: none
-
-        &-item-image
-            background-image: url(../img/promo__img.png)
-            background-repeat: no-repeat
-            background-size: contain
-
-    .offers
-        margin-top: 19px
-        margin-left: 16px
-        margin-right: 16px
-        margin-bottom: 154px
-        grid-template-rows: 1fr 116px
-        grid-gap: 19px
-
-    .featured-goods
-        margin-right: 16px
-        margin-left: 16px
-
-        &-list
-            margin-right: 0px
-            margin-top: 72px
-            justify-content: center
-
-        &-item
-            margin-right: 0
-
-        &-item:nth-child(2n-1)
-            margin-right: 16px
-
-    .md
-        margin-bottom: 16px
-
-    .button-all-catalog
-        margin-top: 16px
-        margin-bottom: 64px
-
-    .services
-        min-height: 610px
-
-        &-list
-            flex-direction: column
-            align-items: center
-            margin-right: 0
-        &-item
-            margin-top: 108px
-            margin-right: 0
-
-    .contacts
-        min-height: 614px
-        &-wrap
-            display: flex
-            flex-direction: column
-            align-items: center
-
-    blockquote
-        margin-top: 64px
-
-    .subscription-form
-        margin-top: 48px
-
-    .footer-bottom-wrap
-        padding-left: 32px
-        padding-right: 32px
-
-    .social-list-item:not(:last-child)
-        margin-right: 7px
-
-@media ( max-width: 767px )
-    .main-header-nav
-        padding-left: 16px
-        padding-right: 16px
-
-    .user-nav-link--user,
-    .user-nav-link--cart
-        display: none
-
-    .promo
-        min-height: 363px
-
-        &-item-image
-            display: none
-
-        &-item-content
-            width: 100%
-            +centerFlex()
-            align-items: center
-            justify-content: center
-
-            .promo-item-content-wrap
-                margin-top: 0
-                margin-left: 0
-
-                .promo-item-content-heading
-                    font-size: 38px
-                    line-height: 46px
-
-                p
-                    font-size: 20px
-                    line-height: 24px
-
-    .offers
-        +centerFlex()
-        align-items: center
-        margin-bottom: 64px
-        margin-top: 64px
-
-        .catalog-category--acccesory img
-            width: 360px
-            min-height: 111px
-
-    .featured-goods-list
-        margin-top: 64px
-
-    .featured-goods-item:nth-child(2n-1)
-        margin-right: 0
-
-    .button-all-catalog
-        margin-bottom: 96px
-        margin-top: 24px
-
-    .footer-bottom
-        min-height: 143px
-
-    .footer-bottom-wrap
-        flex-direction: column
-
-    .copyright
-        order: 2
-        margin-bottom: 9px
-
-    .social-list
-        margin-top: 43px
-
-    // .catalog-category--acccesory
-    //     min-height: 111px
+@import m375

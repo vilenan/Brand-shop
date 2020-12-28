@@ -1,0 +1,110 @@
+@media ( max-width: 767px )
+    .main-header-nav
+        padding-left: 16px
+        padding-right: 16px
+
+    .header-box
+        display: none
+        &-nav
+            display: flex
+            justify-content: space-around
+            padding-bottom: 12px
+
+    .drop-icon-user,
+    .drop-icon-cart
+        fill: #222222
+
+    .user-nav-link--user:hover .drop-icon-user,
+    .user-nav-link--cart:hover .drop-icon-cart
+        fill: $colorSelect
+    .drop
+        width: 100%
+    .promo
+        min-height: 363px
+
+        &-item-image
+            display: none
+
+        &-item-content
+            width: 100%
+            +centerFlex()
+            align-items: center
+            justify-content: center
+
+            .promo-item-content-wrap
+                margin-top: 0
+                margin-left: 0
+
+                .promo-item-content-heading
+                    font-size: 38px
+                    line-height: 46px
+
+                p
+                    font-size: 20px
+                    line-height: 24px
+
+    .offers
+        +centerFlex()
+        align-items: center
+        margin-bottom: 64px
+        margin-top: 64px
+
+    .catalog-category
+        width: 100%
+
+    .catalog-category--acccesory
+        height: 111px
+        width: 100%
+        background-image: url(../img/accesories.jpg)
+        background-size: cover
+        background-position: center
+
+    .accessories-image
+        display: none
+
+    .featured-goods-list
+        margin-top: 64px
+
+    .featured-goods-item
+        width: 100%
+
+    .featured-goods-item:nth-child(2n-1)
+        margin-right: 0
+
+    .button-all-catalog
+        margin-bottom: 96px
+        margin-top: 24px
+
+    .footer-bottom
+        min-height: 143px
+
+    .footer-bottom-wrap
+        flex-direction: column
+
+    .copyright
+        order: 2
+        margin-bottom: 9px
+
+    .social-list
+        margin-top: 43px
+
+    .new-arrivals-wrap
+        flex-direction: column
+        justify-content: flex-start
+        padding-top: 24px
+
+    .new-arrivals-title
+        margin-bottom: 32px
+
+    .filters-param-section
+        font-size: 12px
+        line-height: 14px
+        margin-right: 23px
+    .filter-title
+        display: none
+
+    .filters-icon-mob
+        display: block
+
+    .featured-goods-list
+        margin-top: 40px
