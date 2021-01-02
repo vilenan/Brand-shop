@@ -151,6 +151,18 @@ body
         .logo-link:hover .logo-link-image
             transform: scale(1.25)
 
+        .user-nav-link--search,
+        .user-nav-link--user,
+        .user-nav-link--cart,
+        .menu-link
+            transition: all 0.3s
+
+        .user-nav-link--search:hover,
+        .user-nav-link--user:hover,
+        .user-nav-link--cart:hover,
+        .menu-link:hover
+            opacity: 0.5
+
 .user-nav2
     display: flex
     align-items: center
@@ -590,6 +602,7 @@ blockquote
     padding-left: 22px
     padding-right: 22px
     flex-grow: 1
+    outline: none
 
 .button-subscribe
     color: #FFFFFF
